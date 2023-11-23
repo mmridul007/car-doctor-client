@@ -11,7 +11,7 @@ const Booking = () => {
   const { user } = useContext(AuthContext);
   const [bookings, setBooking] = useState([]);
   const navigate = useNavigate();
-  const url = `https://car-doctor-server-xi-one.vercel.app/bookings?email=${user?.email}`;
+  const url = `https://car-doctor-server-mmridul007.vercel.app/bookings?email=${user?.email}`;
   useEffect(() => {
     fetch(url, {
       method: "GET",
@@ -41,7 +41,7 @@ const Booking = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         if (proceed) {
-          fetch(`https://car-doctor-server-xi-one.vercel.app/bookings/${id}`, {
+          fetch(`https://car-doctor-server-mmridul007.vercel.app/bookings/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
@@ -61,7 +61,7 @@ const Booking = () => {
   };
 
   const handleConfirm = (id) => {
-    fetch(`https://car-doctor-server-xi-one.vercel.app/bookings/${id}`, {
+    fetch(`https://car-doctor-server-mmridul007.vercel.app/bookings/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

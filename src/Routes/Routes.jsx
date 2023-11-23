@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://car-doctor-server-xi-one.vercel.app/services/${params.id}`
+            `https://car-doctor-server-mmridul007.vercel.app/services/${params.id}`
           ),
       },
       {
